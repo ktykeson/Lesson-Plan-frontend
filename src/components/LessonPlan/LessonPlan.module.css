@@ -1,0 +1,357 @@
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+  }
+  @keyframes grow-and-fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes roll {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-30deg) scale(1.1); }
+    75% { transform: rotate(390deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+  
+  /* --- HERO SECTION --- */
+  .heroSection {
+    padding: 16px 8px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .heroTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .heroSubtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+  }
+  .backButton {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.05);
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+  .backButton:hover {
+    color: var(--text-primary);
+    background: rgba(0,0,0,0.08);
+    border-color: rgba(0,0,0,0.1);
+  }
+  
+
+  .regenerateButton {
+    background-color: rgba(26, 102, 255, 1);
+    color: white;
+    border: 2px rgb(0, 38, 255) solid;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+  }
+  .regenerateButton:hover:not(:disabled) {
+    background-color: transparent;
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+  }
+  .regenerateButton:disabled {
+    cursor: wait;
+    background: linear-gradient(135deg, #6c757d, #495057);
+    border-color: #6c757d;
+    box-shadow: none;
+  }
+  
+  /* --- Content & List Styles --- */
+  .contentArea, .listContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .listItemPanel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px; /* A good middle ground padding */
+    
+    /* The Glass Effect */
+    background: var(--inner-panel-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    
+    border-radius: 12px;
+    border: 1px solid var(--inner-panel-border);
+    transition: all 0.2s ease;
+  }
+  
+  /* The Premium Glass Hover Effect */
+  .clickable:hover {
+    transform: translateY(-3px) scale(1.01);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 30px rgba(0, 122, 255, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* --- Unified Text & Icon Styles --- */
+  .textContainer {
+    flex: 1;
+    margin: 0;
+    line-height: 1.4;
+    font-size: 16px; /* Consistent font size */
+    font-weight: 500;
+  }
+  .subtext {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+  }
+  
+  /* The Gradient Icon for all Glass Panels */
+  .icon {
+    font-size: 22px;
+    background: var(--icon-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex-shrink: 0;
+  }
+  .arrowIcon {
+    color: var(--text-secondary);
+    transition: transform 0.2s ease;
+    font-size: 20px;
+  }
+  .clickable:hover .arrowIcon {
+    transform: translateX(4px);
+    color: var(--primary-blue);
+  }
+  /* --- Base Icon & Text Styles --- */
+  .icon {
+    font-size: 22px;
+    background: var(--icon-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .subtext {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+  }
+  .arrowIcon {
+    color: var(--text-secondary);
+    transition: transform 0.2s ease;
+  }
+  .clickable:hover .arrowIcon {
+    transform: translateX(4px);
+    color: var(--primary-blue);
+  }
+  
+  /* --- Detail View --- */
+  .detailContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .chartsWrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .textBox {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+  }
+  .textBox p {
+    margin: 0;
+  }
+  .textBox:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  }
+  .orangeBorder {
+    border-color: var(--orange-tint-border);
+    background-color: var(--orange-tint-bg);
+  }
+  .orangeBorder:hover {
+    border-color: var(--orange-tint-hover-border);
+    background-color: var(--orange-tint-hover-bg);
+  }
+  .blueBorder {
+    border-color: var(--blue-tint-border);
+    background-color: var(--blue-tint-bg);
+  }
+  .blueBorder:hover {
+    border-color: var(--blue-tint-hover-border);
+    background-color: var(--blue-tint-hover-bg);
+  }
+  
+  /* --- Feedback Section --- */
+  .feedbackSection {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .feedbackConfirmation {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    animation: grow-and-fade-in 0.5s ease-out;
+  }
+  .iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 22px;
+}
+
+.iconButton svg {
+    stroke-width: 2.5px;
+}
+
+
+.likeButton:hover {
+    color: var(--success-green);
+    background-color: rgba(45, 186, 78, 0.1);
+}
+
+.dislikeButton:hover {
+    color: var(--error-red);
+    background-color: rgba(215, 58, 73, 0.1);
+}
+
+.iconButton.dice:hover {
+    animation: roll 0.7s ease-out;
+}
+.iconButton.dice {
+    font-size : 25px;
+}
+
+/* Clicked (active) styles */
+.liked svg {
+  color: var(--success-green);
+  animation: pop 0.3s ease-out;
+}
+.disliked svg {
+  color: var(--error-red);
+  animation: pop 0.3s ease-out;
+}
+
+
+.footerAction {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  margin-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.carouselContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px; /* Ensure container has height */
+    overflow: hidden; /* Important for animation */
+  }
+  
+  .positiveInsightPanel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 48px; /* Extra padding for nav buttons */
+    width: 100%;
+    
+    /* The Green Glass Effect */
+    background: rgba(40, 167, 69, 0.15); /* Tinted green background */
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    
+    border-radius: 12px;
+    border: 1px solid rgba(40, 167, 69, 0.3); /* Green border */
+    transition: all 0.2s ease;
+    cursor: grab;
+  }
+  .positiveInsightPanel:active {
+      cursor: grabbing;
+  }
+  .positiveInsightPanel .icon {
+    /* Make the icon green to match */
+    background: linear-gradient(135deg, #28a745, #22813a);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  
+  .carouselNavButton {
+    top: 50%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+  }
+  .carouselNavButton:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+  }
+  .carouselNavButton.prev {
+    left: 10px;
+  }
+  .carouselNavButton.next {
+    right: 10px;
+  }

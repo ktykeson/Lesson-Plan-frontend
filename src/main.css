@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --bg-color: #ffffff;
+  --custom-card-bg: #ffffff;
+  
+  --text-primary: #1c1c1e;
+  --text-secondary: #636366;
+  --primary-blue: #007aff;
+  --cta-gradient: linear-gradient(135deg, #007aff, #0052d4);
+
+  --inner-panel-bg: rgba(255, 255, 255, 0.5);
+  --inner-panel-border: rgba(255, 255, 255, 0.4);
+  
+  --border-color: #e5e5ea;
+  --error-red: #d73a49;
+  --success-green: #2dba4e;
+  --warning-orange: #f5a623;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --border-radius: 16px;
+
+
+  --blue-tint-bg: rgba(0, 122, 255, 0.08);
+  --blue-tint-border: rgba(0, 122, 255, 0.4);
+  --blue-tint-hover-bg: rgba(0, 122, 255, 0.15);
+  --blue-tint-hover-border: rgb(255, 255, 255);
+
+  --orange-tint-bg: rgba(245, 166, 35, 0.1);
+  --orange-tint-border: rgba(245, 166, 35, 0.4);
+  --orange-tint-hover-bg: rgba(245, 166, 35, 0.2);
+  --orange-tint-hover-border: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  padding: 0 24px; 
+}
+
+* {
+  box-sizing: border-box;
+}
