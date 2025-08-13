@@ -16,7 +16,6 @@ const PieChart = ({ percentage, label, value }) => {
       {/* The labels are still rendered as normal */}
       <div className={styles.labels}>
         <span className={styles.label}>{label}</span>
-        <span className={styles.value}>{value}</span>
       </div>
     </div>
   );

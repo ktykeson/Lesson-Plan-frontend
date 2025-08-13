@@ -4,13 +4,13 @@
   box-shadow: var(--shadow);
   border-radius: var(--border-radius);
   padding: 24px;
-  max-width: 475px;
+  min-width: 250px;
+  max-width: 500px;
+  min-height: 600px;
   max-height: 1000px;
-  margin: 40px auto;
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-   max-width: 650px; 
-   width: 100%; 
-   margin: 20px auto; 
+  width: 100%; 
+  margin: 10px auto; 
 }

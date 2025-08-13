@@ -16,25 +16,55 @@
   
   /* --- HERO SECTION --- */
   .heroSection {
-    padding: 16px 8px;
+    padding: 3px 8px;
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 24px;
     position: relative;
   }
   .heroTitle {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 4px;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
   }
   .heroSubtitle {
     font-size: 15px;
     color: var(--text-secondary);
   }
+.subtitle {
+  font-size: 18px;
+  color: #3e3d3d;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+  .heroTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.titleLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titleRight {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+
+
+.titleIcon {
+  font-size: 21px;
+  color: #333;
+}
   .backButton {
     position: absolute;
-    top: 50%;
-    left: 12px;
+    top: 65%;
+    left: 1px;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.05);
     border: 1px solid transparent;
@@ -326,7 +356,7 @@
   }
   
   
-  .carouselNavButton {
+  .carouselNavButton1 {
     top: 50%;
     position: absolute;
     background: rgba(255, 255, 255, 0.2);
@@ -355,3 +385,100 @@
   .carouselNavButton.next {
     right: 10px;
   }
+
+  .backButtonTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  background: rgba(0,0,0,0.05);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.backButtonTopRight:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--text-primary);
+}
+.chartsWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+.carouselOuter {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartContainer {
+  flex: 1;
+  min-height: 320px;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chevron buttons positioned absolutely to left and right of the carousel */
+.carouselNavButton {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.carouselNavButton.left {
+  left: -15px;
+}
+
+.carouselNavButton.right {
+  right: -15px;
+}
+
+.carouselNavButton:hover {
+  background-color: #f0f0f0;
+}
+
+.separator {
+  margin: 0px auto;
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin-top: -15px;
+}
